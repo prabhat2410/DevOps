@@ -20,12 +20,6 @@ pipeline {
             }
         }
         
-     stage('Archive') {
-            steps {
-                archiveArtifacts artifacts: '/**/', fingerprint: true 
-            }
-        }
-        
        stage('Email') {
           steps {
               emailext attachLog: true, body: 'The status of the build can be obtained from the build log attached', subject: 'The build update is ', to: 'prabhat1307@gmail.com'
