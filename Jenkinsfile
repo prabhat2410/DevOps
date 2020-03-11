@@ -22,7 +22,7 @@ pipeline {
         
      stage('Archive') {
             steps {
-                archiveArtifacts artifacts: '/home/centos/workspace/addressbook.war', fingerprint: true 
+                archiveArtifacts artifacts: '/**/*.war', fingerprint: true 
             }
         }
         
